@@ -378,10 +378,39 @@ namespace Keystrokes
                 if (processFilter.ProcessItems.Contains(process.ProcessName) == false)
                 {
                     isProcessActive = false;
+                    DisplayReset();
                     return;
                 }
             }
             isProcessActive = true;
+        }
+
+        private void DisplayReset()
+        {
+            // Mouse
+            this.MouseLeftUI.Fill = backgroundBrush;
+            this.MouseMidleUI.Fill = backgroundBrush;
+            this.MouseRightUI.Fill = backgroundBrush;
+
+            this.MouseWheelUI.Visibility = Visibility.Hidden;
+            this.MouseMoveUI.Fill = backgroundBrush;
+
+            // Key
+            this.CtrlLeftUI.Fill = backgroundBrush;
+            this.CtrlRightUI.Fill = backgroundBrush;
+            this.CtrlUI.Foreground = borderBrush;
+
+            this.ShiftLeftUI.Fill = backgroundBrush;
+            this.ShiftRightUI.Fill = backgroundBrush;
+            this.ShiftUI.Fill = borderBrush;
+
+            this.AltLeftUI.Fill = backgroundBrush;
+            this.AltRightUI.Fill = backgroundBrush;
+            this.AltUI.Foreground = borderBrush;
+
+            this.KeyLargeUI.Content = string.Empty;
+            this.KeyShort1UI.Content = string.Empty;
+            this.KeyShort2UI.Content = string.Empty;
         }
     }
 }

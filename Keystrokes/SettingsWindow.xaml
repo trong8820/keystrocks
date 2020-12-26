@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Keystrokes"
         mc:Ignorable="d"
-        Title="Settings" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="Settings" Height="450" Width="800" Loaded="Window_Loaded" Icon="Assets/icon-on.ico">
     <Grid>
         <TabControl>
             <TabItem Header="Process filter">
@@ -34,7 +34,22 @@
                     </Grid>
                 </Grid>
             </TabItem>
-            <TabItem Header="About"></TabItem>
+            <TabItem Header="About">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80px"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Width="64" Height="64" Source="Assets/icon-about.png" VerticalAlignment="Top" Margin="8"></Image>
+                    <StackPanel Grid.Column="1" VerticalAlignment="Top">
+                        <Label Content="Keystrokes"></Label>
+                        <Label Content="Version 1.0.1"></Label>
+                        <TextBlock>
+                            <Hyperlink NavigateUri="mailto:trong8820@gmail.com">trong8820@gmail.com</Hyperlink>
+                        </TextBlock>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>

@@ -78,6 +78,8 @@ namespace Keystrokes
             {
                 processFilter.ProcessItems.Add(processItem);
             }
+
+            this.processFilter.Save();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

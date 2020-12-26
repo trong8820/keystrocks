@@ -25,7 +25,10 @@ namespace Keystrokes
         public App()
         {
             processFilter = new ProcessFilter();
+            processFilter.Load();
+
             settingsWindow = new SettingsWindow(processFilter);
+
             mainwindow = new MainWindow(processFilter);
             mainwindow.Show();
 
